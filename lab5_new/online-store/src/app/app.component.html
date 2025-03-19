@@ -1,0 +1,11 @@
+<div class="main">
+  <div class="ctg">
+    <div class="nav">
+      <ul class="nav_list">
+        <li *ngFor="let category of categories" id="lst"><button id="ctbt" (click)="categoryClick(category.name)">{{ category.name }}</button></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<app-product-list *ngIf="show" [categoryName]="categoryName"></app-product-list>
