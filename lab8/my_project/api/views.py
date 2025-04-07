@@ -22,7 +22,6 @@ def categories_list(request):
     categories = Category.objects.all()
     categories_json = [category.to_json() for category in categories]
     response =  JsonResponse(categories_json, safe=False)
-    response["Access-Control-Allow-Origin"] = "*"
     return response
 
 def category_detail(request, id):
